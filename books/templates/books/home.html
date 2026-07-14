@@ -12,11 +12,6 @@
 
     <ul>
         {% for b in books %}
-        <li>{{ b.title}} - {{ b.author }}</li>
+        <li>{{ b.title}} - {{ b.author }} <a href="{% url 'delete_book' b.pk %}" >🗑️</a> </li>
         {% endfor %}
     </ul>
-
-
-
-</body>
-</html>
