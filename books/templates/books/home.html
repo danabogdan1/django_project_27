@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Book Mnager 1.0</title>
+  <meta charset="UTF-8">
+  <title>Book Manager 1.0</title>
 </head>
 <body>
 
-    <!-- cod html semantic -->
+  <!-- cod html semantic -->
 
-    <a href="{% url 'create_book' %}">Create Book</a>
+  <a href="{% url 'create_book' %}">Create Book</a>
 
-    <ul>
-        {% for b in books %}
-        <li>{{ b.title}} - {{ b.author }} <a href="{% url 'delete_book' b.pk %}" >🗑️</a> </li>
-        {% endfor %}
-    </ul>
+  <ul>
+    {% for b in books %}
+      <li>{{ b.title }} - {{ b.author }} <a href="{% url 'delete_book' b.pk %}" >🗑️</a> </li>
+    {% endfor %}
+  </ul>
+
+</body>
+</html>
